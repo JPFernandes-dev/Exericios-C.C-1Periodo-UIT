@@ -7,13 +7,20 @@ int main (){
     scanf("%i", &x);
     num = x;
     y = x;
-    for (;;){
-            y--;
-            if (y == 0) { break; }
-            x = x*y;
-    }
-    
+    if (num != 0){
+        for (;;){
+                y--;
+                if (y == 0) { break; }
+                x = x*y;
+        }   
     printf("%i! = %i",num, x);
+    }
+
+    else {
+        printf("0! = 1");
+    }
+
+    printf("\n\n");
     system("pause");
     return 0;
 }

@@ -1,4 +1,6 @@
-// NÃO FINALIZADO //
+/*
+    Calcule s= 1/1 - 2/4 + 3/9 - 4/16 + 5/25 + ... - 10/100
+*/
 
 #include <stdlib.h>
 #include<stdio.h>
