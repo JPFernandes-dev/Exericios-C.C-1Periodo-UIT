@@ -12,38 +12,48 @@
 #include<math.h>
 
 int main() {
-    float a, b, c, delta, x1, x2;
+    int a, b, c, delta = 0;
+    float x1, x2;
 
     printf("Digite o valor de a: ");
-    scanf("%f", &a);
-    if(a == 0){
-        printf("equação não é do 2o grau.");
+    scanf("%i", &a);
+
+    if(a == 0){ // Verifica se o valor de a é igual a 0, finalizando o programa se for verdadeiro
+        printf("Equacao nao e do 2o grau\n\n");
         system("pause");
         exit(0);
     }
 
     printf("Digite o valor de b: ");
-    scanf("%f", &b);
+    scanf("%i", &b);
 
     printf("Digite o valor de c: ");
-    scanf("%f", &c);
+    scanf("%i", &c);
 
-    delta = pow(b, 2) - (4*b*c);
-    if (delta < 0) {
-        printf("\nEquação não possui raizes reais");
+    delta = pow(b, 2) - (4*a*c); // Calcula o valor de delta.
+
+    system("cls"); //Limpa a tela do prompt (windows).
+    printf("a: %i\nb: %i\nc: %i\nDelta: %i", a, b, c, delta); // Mostra ao usuário todos valores.
+
+
+    if (delta < 0) { // Verifica se o delta é negativo.
+        printf("\nEquacao nao possui raizes reais.\n\n");
         system("pause");
         exit(0);
     }
 
-    x1 = (-b + sqrt(delta))/2*a;
-    x2 =  (-b - sqrt(delta))/2*a;
+    x1 = (-b + sqrt(delta))/2*a; //Calcula a primeira raíz.
+    x2 =  (-b - sqrt(delta))/2*a; //Calcula a segunda raíz.
 
-    if (x1 > 0){
-        printf("\nRaiz 1: %2.f", x1);
+    printf("\nRaiz 1: %2.f", x1);
+
+    if (x2 != x1){ //Verifica se as raízes são diferentes.
+        printf("\nRaiz 2: %2.f", x2);
+        printf("\n\nEquacao possui duas raizes reais.");
     }
 
-    if(x2 > 0){
-        printf("\nRaiz 2: %2.f", x2);
+    else{
+        printf("\n\nEquacao possui apenas uma raiz real.");
     }
 
     printf("\n\n");
