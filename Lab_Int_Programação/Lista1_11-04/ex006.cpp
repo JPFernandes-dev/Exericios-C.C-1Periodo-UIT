@@ -13,12 +13,52 @@
 #include<stdlib.h>
 
 int main() {
-    int resposta, cont = 5;
+    int resposta, cont = 0;
 
-    printf("Telefonou para a vítima?\n[1 - Sim/2 - Nao]: ");
+    printf("Telefonou para a vitima?\n[ 0 - Nao / 1 - Sim]: ");
     scanf("%i",&resposta);
 
-    if(resposta == 1){
-        cont--;
+    cont = cont + resposta;
+
+    printf("\nEsteve no local do crime?\n[ 0 - Nao / 1 - Sim]: ");
+    scanf("%i",&resposta);
+
+    cont = cont + resposta;
+
+    printf("\nMora perto da vitima?\n[ 0 - Nao / 1 - Sim]: ");
+    scanf("%i",&resposta);
+
+    cont = cont + resposta;
+
+    printf("\nDevia para a vitima?\n[ 0 - Nao / 1 - Sim]: ");
+    scanf("%i",&resposta);
+
+    cont = cont + resposta;
+
+    printf("\nJá trabalhou com a vitima?\n[ 0 - Nao / 1 - Sim]: ");
+    scanf("%i",&resposta);
+
+    cont = cont + resposta;
+
+
+    if(cont == 2){
+        printf("\nSuspeita");
     }
+
+    if(cont >= 3 && cont <= 4){
+        printf("\nCumplice");
+    }
+
+    if(cont == 5){
+        printf("\nAssasino");
+    }
+
+    if(cont < 2){
+        printf("\nInocente");        
+    }
+
+
+    printf("\n\n\n");
+    system("pause");
+    return 0;
 }
