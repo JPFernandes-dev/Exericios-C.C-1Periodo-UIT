@@ -1,6 +1,6 @@
 # Exercícios Resolvidos do Curso de Ciência da Computação - UIT 1º Periodo
 
-Listadas de exercícios resolvidos em linguagem C e C++. 
+Listas de exercícios resolvidos em linguagem C e C++. 
 
 Matérias:
   * Algoritimos e Estruturas Dados (AEDS)
