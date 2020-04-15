@@ -18,6 +18,7 @@ int main() {
     printf("Telefonou para a vitima?\n[ 0 - Nao / 1 - Sim]: ");
     scanf("%i",&resposta);
 
+    // Contador das respostas
     cont = cont + resposta;
 
     printf("\nEsteve no local do crime?\n[ 0 - Nao / 1 - Sim]: ");
@@ -40,7 +41,7 @@ int main() {
 
     cont = cont + resposta;
 
-
+    // verifica em que categoria as respostas se encaixam 
     if(cont == 2){
         printf("\nSuspeita");
     }
