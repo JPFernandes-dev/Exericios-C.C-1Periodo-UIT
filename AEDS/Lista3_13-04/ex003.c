@@ -11,8 +11,8 @@ int main (){
     int empresaA = 1000, empresaB = 700, mes = 0;
 
     while(empresaA>empresaB) { //enquanto a empresaA for menor que a empresaB faça:
-        empresaA = empresaA * 1.2;  // aumento de 2% ao mês, ou seja 102/100 
-        empresaB = empresaB * 1.7;  // aumento de 7% ao mês, ou seja 107/100
+        empresaA = empresaA * 1.02;  // aumento de 2% ao mês, ou seja 102/100 
+        empresaB = empresaB * 1.07;  // aumento de 7% ao mês, ou seja 107/100
         mes++; //soma dos meses
     }
 
