@@ -28,36 +28,36 @@ int main () {
     if(peso <= 5){
         if(carne == 1){
             valor = peso * 4.9;
-            tipoCarne[10] = 'File Duplo';
+            tipoCarne[11] = 'File Duplo';
 
         }
 
         else if(carne == 2){
             valor = peso * 5.9;
-            tipoCarne[10] = 'Alcatra';
+            tipoCarne[8] = 'Alcatra';
         }
 
         else {
             valor = peso * 6.9;
-            tipoCarne[10] = 'Picanha';
+            tipoCarne[8] = 'Picanha';
         }
     }
 
     else{
         if(carne == 1){
             valor = peso * 5.8;
-            tipoCarne[10] = 'File Duplo';
+            tipoCarne[11] = 'File Duplo';
         }
 
         else if(carne == 2){
             valor = peso * 6.8;
-            tipoCarne[10] = 'Alcatra';
+            tipoCarne[11] = 'Alcatra';
 
         }
 
         else {
             valor = peso * 7.8;
-            tipoCarne[10] = 'Picanha';
+            tipoCarne[11] = 'Picanha';
         }
     }
 
@@ -67,13 +67,13 @@ int main () {
     if(pagamento == 1) { 
         ValorFinal = valor * 0.95; 
         desconto = valor * 0.05;
-        tipoPagamento[30] = 'Cartao Tabajara';
+        char tipoPagamento[30] = "Cartao Tabajara";
     }
 
     else{
         desconto = 0;
         ValorFinal = valor;
-        tipoPagamento[30] = 'Cartao Comum ou Dinheiro';
+        char tipoPagamento[30] = "Cartao Comum ou Dinheiro";
     }
 
     system("cls");
