@@ -13,9 +13,9 @@
 
 
 int main () {
-    float peso = 0, valor = 0, desconto = 0, ValorFinal = 0;
+    float peso = 0, valor = 0, desconto = 0, ValorFinal = 0, menor5[3] = {4.9,5.9,6.9}, maior5[3]={5.8,6.8,6.8};
     int carne = 0, pagamento = 0;
-    char tipoCarne[20], tipoPagamento[30];
+    char tipoCarne[20];
 
     printf("==========+ HIPERMERCADO TABAJARA +==========\n");
 
@@ -26,39 +26,11 @@ int main () {
     scanf("%f", &peso);
 
     if(peso <= 5){
-        if(carne == 1){
-            valor = peso * 4.9;
-            tipoCarne[11] = 'File Duplo';
-
-        }
-
-        else if(carne == 2){
-            valor = peso * 5.9;
-            tipoCarne[8] = 'Alcatra';
-        }
-
-        else {
-            valor = peso * 6.9;
-            tipoCarne[8] = 'Picanha';
-        }
+        valor = peso*menor5[carne - 1];
     }
 
     else{
-        if(carne == 1){
-            valor = peso * 5.8;
-            tipoCarne[11] = 'File Duplo';
-        }
-
-        else if(carne == 2){
-            valor = peso * 6.8;
-            tipoCarne[11] = 'Alcatra';
-
-        }
-
-        else {
-            valor = peso * 7.8;
-            tipoCarne[11] = 'Picanha';
-        }
+        valor = peso*maior5[carne - 1];
     }
 
     printf("\nForma de Pagamento\nCartao Tabajara (5%% de desc): [1]\nDinheiro / Cartao comum: [2]\nR.: ");
@@ -67,18 +39,29 @@ int main () {
     if(pagamento == 1) { 
         ValorFinal = valor * 0.95; 
         desconto = valor * 0.05;
-        char tipoPagamento[30] = "Cartao Tabajara";
     }
 
     else{
         desconto = 0;
         ValorFinal = valor;
-        char tipoPagamento[30] = "Cartao Comum ou Dinheiro";
+    }
+
+    for(int i=0;i<3;i++){
+        
     }
 
     system("cls");
 
-    printf("\n+==========+ CUPOM FISCAL +==========+\nTipo de Carne: %s\nQuantidade: %4.fkg\n----------------------------------------------------------------\nValor total: R$%.2f     Forma de Pagamento: %s      Desconto: R$%.2f\n----------------------------------------------------------------\nValor a pagar: R$%.2f\n+==============================================================+\n                      Volte Sempre! :)",tipoCarne, peso, valor, tipoPagamento, desconto, ValorFinal);
+    printf("\n+==========+ CUPOM FISCAL +==========+\n");
+    printf("Tipo de Carne: %s");
+    printf("\nQuantidade: R$%.2fkg", peso);
+    printf("\n----------------------------------------------------------------\n");
+    printf("Valor total: R$%.2f", valor);
+    printf("     Forma de Pagamento: %s", pagamento==1?"Cartao Tabajara":"Cartao Comum ou Dinheiro");
+    printf("      Desconto: R$%.2f", desconto);
+    printf("\n----------------------------------------------------------------\n");
+    printf("Valor a pagar: R$%.2f", ValorFinal);
+    printf("\n+==============================================================+\n                      Volte Sempre! :)");
 
     printf("\n\n\n");
     system("pause");
