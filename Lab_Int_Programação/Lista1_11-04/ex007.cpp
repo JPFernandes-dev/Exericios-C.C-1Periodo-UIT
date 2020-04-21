@@ -15,16 +15,20 @@
 int main () {
     float peso = 0, valor = 0, desconto = 0, ValorFinal = 0, menor5[3] = {4.9,5.9,6.9}, maior5[3]={5.8,6.8,6.8};
     int carne = 0, pagamento = 0;
-    char tipoCarne[20];
+    char *tipoCarne;
 
     printf("==========+ HIPERMERCADO TABAJARA +==========\n");
 
-    printf("\nQual tipo de carne: \n File Duplo: [1]\n Alcantra: [2]\n Picanha: [3]\nR.: ");
-    scanf("%d", &carne);
+    do{
+        printf("\nQual tipo de carne: \n File Duplo: [1]\n Alcantra: [2]\n Picanha: [3]\nR.: ");
+        scanf("%d", &carne);
+    } while(not (carne < 3 && carne > 0));
 
-    printf("\nDigite o peso em kg: ");
-    scanf("%f", &peso);
-
+    do {
+         printf("\nDigite o peso em kg: ");
+         scanf("%f", &peso);
+    } while (peso < 1);
+    
     if(peso <= 5){
         valor = peso*menor5[carne - 1];
     }
@@ -49,11 +53,14 @@ int main () {
     for(int i=0;i<3;i++){
         
     }
-
+    if(carne=1){char tpCarne[20] = {"File Duplo"}; tipoCarne = tpCarne; gets(tpCarne);}
+    if(carne=2){char tpCarne[20] = {"Alcantra"}; tipoCarne = tpCarne;}
+    if(carne=3){char tpCarne[20] = {"File"}; tipoCarne = tpCarne;}
+;
     system("cls");
 
     printf("\n+==========+ CUPOM FISCAL +==========+\n");
-    printf("Tipo de Carne: %s");
+    printf("Tipo de Carne: %s", tipoCarne);
     printf("\nQuantidade: R$%.2fkg", peso);
     printf("\n----------------------------------------------------------------\n");
     printf("Valor total: R$%.2f", valor);
