@@ -10,16 +10,48 @@ xoxox
 #include<stdlib.h>
 #include<stdio.h>
 
-int main () {
+void imagem(int x) {
+    int i, j, k;
+
+    for(i=0;i<x;i++){
+        printf("\n\t");
+        if(i%2==0){
+            for(j=0;j<x/2;j++){
+                for(k=0;k<1;k++){
+                    printf("x");
+                }
+                for(k=0;k<1;k++){
+                    printf("o");
+                }
+            }
+            if(x%2==1){
+                printf("x");
+            }
+        }
+        else{
+            for(j=0;j<x/2;j++){
+                for(k=0;k<1;k++){
+                    printf("o");
+                }
+                for(k=0;k<1;k++){
+                    printf("x");
+                }
+            }
+            if(x%2==1){
+                printf("o");
+            }
+        }
+    }
+}
+
+int main() { 
     int num;
 
-    do{ //Repete enquanto o usuario não digitar 5.
-        printf("Digite um numero: ");
-        scanf("%d", &num);
-    }while (num != 5);
+    printf("Digite um numero: ");
+    scanf("%d", &num);
 
-    printf("\n\txoxox\n\toxoxo\n\txoxox\n\toxoxo");
-    
+    imagem(num);
+
     printf("\n\n");
     system("pause");
     return 0;

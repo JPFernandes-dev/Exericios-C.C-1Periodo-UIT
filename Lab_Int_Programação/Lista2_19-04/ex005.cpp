@@ -15,10 +15,10 @@ void imagem(int x){
     int i, j;
 
     // 1º Laço percorre a quantidade do numero informado e o 2º laço percore a quantidade do numero informado separadamente. Ex.: 2 o laço percorre 2 vezes, ou seja **, e assim por diante até o último numero.
-    for(i=1;i<x+1;i++){
+    for(i=0;i<x;i++){
         //quebra de linha sempre que acabar um laço (linha).
         printf("\n\t");
-        for(j=0;j<i;j++){
+        for(j=0;j<i+1;j++){
             printf("*");
         }
     }
