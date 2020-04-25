@@ -13,7 +13,8 @@ int main (){
     scanf("%d", &tm);
     
     // Vetor para receber a quantidade de cada aluno por turma, matriz para receber as notas de cada aluno de cada turma.
-    int alunos[tm], notasTotal[100][100];
+    int alunos[tm]; 
+    float notasTotal[100][100];
 
     // Laço para receber o numero de cada aluno por turma
     for (i=0;i<tm;i++){
@@ -29,7 +30,7 @@ int main (){
         // Laço para correr dentro de cada aluno e receber sua nota na matriz
         for (int a=0;a<al;a++){
             printf("Digite a nota do %do aluno da turma %d: ", a+1, t+1);
-            scanf("%d", &notasTotal[t][a]);
+            scanf("%f", &notasTotal[t][a]);
         }
     }
 
@@ -38,7 +39,7 @@ int main (){
         al = alunos[i];
         printf("\n\tNOTAS TURMA %d",i+1);
         for(j=0;j<al;j++){
-            printf("\n%do Aluno: %d pts", j+1, notasTotal[i][j]);
+            printf("\n%do Aluno: %.2f pts", j+1, notasTotal[i][j]);
         }
         printf("\n");
     }
