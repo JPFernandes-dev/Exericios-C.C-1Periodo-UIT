@@ -6,4 +6,3 @@ Matérias:
   * Algoritimos e Estruturas Dados (AEDS)
   * Laboratório de Introdução a Proramação (Lab_Int_Programação)   
 
-Att.: 20/04/2020
