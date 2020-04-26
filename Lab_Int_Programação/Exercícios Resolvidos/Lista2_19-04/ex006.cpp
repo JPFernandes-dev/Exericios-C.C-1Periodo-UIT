@@ -1,39 +1,35 @@
 /*
-    Você foi contratado para criar um código que escreva o grande sucesso da música popular brasileira, “creu”. Para isso você deve receber do usuário a velocidade que ele deseja e escrever a música da velocidade 1 até a informada, no seguinte formato, caso o usuário digite 3, deverá aparecer o código a seguir:
-    Velocidade 1 do creu:
-    creu
-    Velocidade 2 do creu:
-    creu creu
-    Velocidade 3 do creu:
-    creu creu creu
+    Faça um programa que receba infinitos números do usuário. O sistema só deve parar de receber números caso o usuário digite um número primo ou um número negativo. Ao final, imprimir quantos números o usuário digitou.
+
 */
 
 #include<stdlib.h>
 #include<stdio.h>
 
-//A lógica desse programa é a mesma do exercício anterior, tendo como diferença somente de uma frase informando a velocidade do creu.
+main () {
+    int num, primo, i;
+    bool sair=true;
 
-void veloCreu(int x){
-    int i, j;
-
-    for (i=1;i<x+1;i++){
-        printf("\nVelocidade %d do creu:\n", i);
-        for(j=0;j<i;j++){
-            printf("creu ");
+    do{
+        num = 0;
+        primo = 0;
+        printf("Digite um numero: ");
+        scanf("%d", &num);
+        // Verifica se o numero é primo
+        for(i=1;i<num+1;i++){
+            if(num%i==0){
+                primo++;
+            }
         }
-        printf("\n");
-    }
-}
+        // Verifica o numero é primo ou negativo separadamente, pois o while continua enquanto o comando for verdadeiro, usando o condicional ou, o processo nunca iria acabar.
+        if(primo == 2 || num<0){
+            sair = false;
+        }
 
-int main (){
-    int creu;
+    } while(sair);
+    
+    printf("\nO Numero: %d \202 ", num);
+    printf(num>0?"primo":"negativo");
 
-    printf("Digite a velocidade do creu: ");
-    scanf("%d", &creu);
-
-    veloCreu(creu);
-
-    printf("\n\n");
-    system("pause");
-    return 0;
+    system("Pause>null");
 }
