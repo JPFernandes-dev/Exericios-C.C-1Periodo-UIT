@@ -6,7 +6,7 @@
 #include<stdlib.h>
 
 int main () {
-    int num[10], i;
+    int num[10], i, par, impar;
 
    for(i=0;i<10;i++){
        do{
@@ -17,12 +17,14 @@ int main () {
 
    for(i=0;i<10;i++){
        if(num[i]%2==0){
-           printf("\nNumero %d e par.", num[i]);
+           par++;
        }
        else{
-           printf("\nNumero %d e impar.", num[i]);
+           impar++;
        }
    }
+
+    printf("Total de: %d numeros pares e %d impares.", par, impar);
 
    printf("\n\n");
    system("pause");
