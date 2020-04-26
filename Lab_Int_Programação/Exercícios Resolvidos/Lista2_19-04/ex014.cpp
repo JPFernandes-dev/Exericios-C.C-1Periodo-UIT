@@ -13,6 +13,7 @@ int main () {
            printf("Digite o %do numero: ",i+1);
            scanf("%d", &num[i]);
        }while(num[i] < 0);
+       printf("\n");
    }
 
    for(i=0;i<10;i++){
