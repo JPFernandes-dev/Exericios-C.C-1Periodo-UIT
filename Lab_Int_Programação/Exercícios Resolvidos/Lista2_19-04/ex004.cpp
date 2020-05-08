@@ -18,7 +18,7 @@ int main (){
 
     // Laço para receber o numero de cada aluno por turma
     for (i=0;i<tm;i++){
-        printf("Digite a quantidade de alunos da tuma %d: ", i+1);
+        printf("Digite a quantidade de alunos da turma %d: ", i+1);
         scanf("%d", &alunos[i]);
 
     }
